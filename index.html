@@ -31,22 +31,23 @@
         }
         /* 區塊大標題 */
         .main-heading {
-            font-size: 1.25rem;
+            font-size: 1.15rem; 
             font-weight: 700;
-            letter-spacing: 0.2em;
+            letter-spacing: 0.05em; 
             text-align: center;
             margin-bottom: 2rem;
             color: #8D7B6D;
             display: flex;
             align-items: center;
             justify-content: center;
+            white-space: nowrap; 
         }
         .main-heading::before, .main-heading::after {
             content: "";
             flex: 1;
             height: 1px;
             background: #D5BDAF;
-            margin: 0 15px;
+            margin: 0 10px; 
             opacity: 0.5;
         }
         .tag {
@@ -77,15 +78,29 @@
         
         <!-- SECTION 1: 優惠活動 -->
         <section id="promotions">
-            <h2 class="main-heading">LIMITED OFFERS / 優惠活動</h2>
+            <h2 class="main-heading">LIMITED OFFERS 優惠活動</h2>
             <div class="section-card p-8 promo-highlight">
                 <div class="text-center mb-8">
                     <div class="inline-block px-6 py-2 border-y border-[#D5BDAF] mb-4">
                         <span class="text-xl font-medium tracking-widest uppercase">Special For You</span>
                     </div>
-                    <div class="space-y-2">
-                        <p class="text-lg font-bold text-[#A68A78]">新客首訪 9 折 <span class="text-xs font-normal opacity-60">(不含卸/補)</span></p>
-                        <p class="text-lg font-bold text-[#A68A78]">舊客回饋 贈下睫毛 <span class="text-xs font-normal opacity-60">(價值$380)</span></p>
+                    
+                    <!-- 頂部主要優惠：新客/舊客 -->
+                    <div class="flex flex-col md:flex-row justify-center items-center gap-2 md:gap-6 text-[#A68A78] mb-6">
+                        <p class="text-base md:text-lg font-bold whitespace-nowrap">新客首訪 9 折 <span class="text-[10px] font-normal opacity-60">(不含卸/補)</span></p>
+                        <span class="hidden md:block opacity-30">|</span>
+                        <p class="text-base md:text-lg font-bold whitespace-nowrap">舊客回饋 贈下睫毛 <span class="text-[10px] font-normal opacity-60">(價值$380)</span></p>
+                    </div>
+
+                    <!-- 強調設計的新中式美睫 -->
+                    <div class="bg-[#EAE2DC]/30 p-4 rounded-2xl border border-[#D5BDAF]/20">
+                        <div class="flex justify-between items-center text-[#7A6558]">
+                            <span class="font-bold tracking-widest flex items-center">
+                                <span class="bg-[#8D7B6D] text-white text-[10px] px-2 py-0.5 rounded-sm mr-2 font-normal">設計</span>
+                                新中式美睫
+                            </span>
+                            <span class="font-bold text-lg">$1099</span>
+                        </div>
                     </div>
                 </div>
                 
@@ -105,10 +120,10 @@
 
         <!-- SECTION 2: 價目表 -->
         <section id="pricelist">
-            <h2 class="main-heading">SERVICE MENU / 價目表</h2>
+            <h2 class="main-heading">SERVICE MENU 價目表</h2>
             
             <div class="space-y-6">
-                <!-- 經典單根 -->
+                <!-- 經典款 -->
                 <div class="section-card p-6">
                     <h3 class="font-bold mb-5 flex items-center text-[#7A6558]"><span class="tag">經典</span> 經典單根系列</h3>
                     <div class="price-item"><span>100 根</span><span class="font-medium">$1000</span></div>
@@ -123,20 +138,14 @@
                     <div class="price-item"><span>500 - 600 根</span><span class="font-medium">$1600</span></div>
                 </div>
 
-                <!-- 設計款 -->
+                <!-- 設計系列 -->
                 <div class="section-card p-6">
-                    <div class="mb-8">
-                        <h3 class="font-bold mb-5 flex items-center text-[#7A6558]"><span class="tag">設計</span> 小紅書設計款</h3>
-                        <div class="price-item"><span>上睫毛 + 下睫毛</span><span class="font-medium">$1680</span></div>
-                        <div class="price-item"><span>補睫 (兩週內, 需留存一半)</span><span class="font-medium">$1200</span></div>
-                    </div>
-                    <div>
-                        <h3 class="font-bold mb-5 flex items-center text-[#7A6558]"><span class="tag">新品</span> 新中式美睫</h3>
-                        <div class="price-item"><span>新品體驗價</span><span class="font-medium">$1200</span></div>
-                    </div>
+                    <h3 class="font-bold mb-5 flex items-center text-[#7A6558]"><span class="tag">設計</span> 小紅書設計款</h3>
+                    <div class="price-item"><span>上睫毛 + 下睫毛</span><span class="font-medium">$1680</span></div>
+                    <div class="price-item"><span>補睫 (兩週內, 需留存一半)</span><span class="font-medium">$1200</span></div>
                 </div>
 
-                <!-- 卸除與補睫 -->
+                <!-- 其他服務 -->
                 <div class="grid md:grid-cols-2 gap-6">
                     <div class="section-card p-6">
                         <h4 class="font-bold mb-4 text-sm border-b pb-2">卸除服務</h4>
@@ -158,9 +167,8 @@
 
         <!-- SECTION 3: 預約須知 -->
         <section id="notes">
-            <h2 class="main-heading">RESERVATION / 預約須知</h2>
+            <h2 class="main-heading">RESERVATION 預約須知</h2>
             
-            <!-- 服務空間說明 -->
             <div class="text-center mb-6">
                 <p class="text-sm font-medium text-[#8D7B6D] mb-1">🏠 服務空間：居家工作室</p>
                 <p class="text-xs opacity-70">位置：桃園龜山 A7（近 A7 & A8 機捷）</p>
@@ -205,7 +213,6 @@
             </div>
         </section>
 
-        <!-- Footer Footer -->
         <footer class="text-center pb-24">
             <div class="mb-4 opacity-40 italic text-sm font-light tracking-widest">Minimalist Lash Design</div>
             <p class="text-[10px] opacity-30 tracking-tighter uppercase">© ina.lashes | All Rights Reserved</p>
@@ -215,4 +222,3 @@
 
 </body>
 </html>
-
