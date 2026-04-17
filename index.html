@@ -3,19 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ina以娜·美睫 | 簡約美睫預約資訊</title>
+    <title>ina以娜·美睫 | 預約資訊</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Noto Sans TC', sans-serif;
-            background-color: #F2E9E4; /* 奶茶色背景 */
-            color: #4A3E37; /* 深褐文字 */
+            background-color: #F2E9E4;
+            color: #4A3E37;
         }
         .serif {
             font-family: 'Playfair Display', serif;
         }
-        /* 區塊卡片樣式 */
         .section-card {
             background: rgba(255, 255, 255, 0.7);
             border-radius: 24px;
@@ -25,11 +24,17 @@
             display: flex;
             justify-content: space-between;
             align-items: baseline;
-            margin-bottom: 0.75rem;
+            margin-bottom: 0.5rem;
             border-bottom: 1px dashed #D5BDAF;
             padding-bottom: 0.3rem;
         }
-        /* 區塊大標題 */
+        .time-tag {
+            font-size: 0.7rem;
+            color: #A68A78;
+            margin-top: -0.25rem;
+            margin-bottom: 0.75rem;
+            display: block;
+        }
         .main-heading {
             font-size: 1.15rem; 
             font-weight: 700;
@@ -59,7 +64,6 @@
             margin-right: 8px;
             font-weight: 600;
         }
-        /* 優惠亮點樣式 */
         .promo-highlight {
             border: 1px solid #D5BDAF;
             background: #FDF8F5;
@@ -68,7 +72,6 @@
 </head>
 <body class="py-12 px-5 md:px-0">
 
-    <!-- Logo & Header -->
     <header class="text-center mb-16">
         <h1 class="serif text-5xl mb-3 tracking-[0.2em] uppercase text-[#8D7B6D]">ina</h1>
         <p class="text-sm tracking-[0.4em] font-light opacity-80">以娜 · 美睫 · LASHES</p>
@@ -79,35 +82,29 @@
         <!-- SECTION 1: 優惠活動 -->
         <section id="promotions">
             <h2 class="main-heading">LIMITED OFFERS 優惠活動</h2>
-            <div class="section-card p-8 promo-highlight">
-                <div class="text-center mb-8">
-                    <div class="inline-block px-6 py-2 border-y border-[#D5BDAF] mb-4">
-                        <span class="text-xl font-medium tracking-widest uppercase">Special For You</span>
-                    </div>
-                    
-                    <!-- 全款式優惠內容 -->
-                    <div class="space-y-3 mb-6">
-                        <div class="flex flex-col items-center justify-center">
-                            <p class="text-2xl font-bold text-[#A68A78] tracking-widest">全款式 $1099</p>
-                            <p class="text-sm font-medium text-[#8D7B6D] mt-1">加碼贈送下睫毛 <span class="text-[10px] opacity-60 font-normal">(價值$380)</span></p>
-                        </div>
-                    </div>
-
-                    <!-- 備註說明 -->
-                    <div class="text-[10px] text-[#A68A78] opacity-70 italic space-y-1">
-                        <p>* 本活動不與其他優惠併用</p>
-                        <p>* 單根及柔密款補睫依照原價</p>
-                    </div>
+            <div class="section-card p-8 promo-highlight text-center">
+                <div class="inline-block px-6 py-2 border-y border-[#D5BDAF] mb-4">
+                    <span class="text-xl font-medium tracking-widest uppercase">SPECIAL FOR YOU</span>
                 </div>
                 
-                <div class="grid gap-4 text-xs md:text-sm leading-relaxed text-[#7A6558]">
+                <div class="space-y-3 mb-6">
+                    <p class="text-2xl font-bold text-[#A68A78] tracking-widest">全款式 $1099</p>
+                    <p class="text-sm font-medium text-[#8D7B6D]">加碼贈送下睫毛 <span class="text-[10px] opacity-60 font-normal">(價值$380)</span></p>
+                </div>
+
+                <div class="text-[10px] text-[#A68A78] opacity-70 italic space-y-1 mb-8">
+                    <p>* 本活動不與其他優惠併用</p>
+                    <p>* 單根及柔密款補睫依照原價</p>
+                </div>
+                
+                <div class="grid gap-4 text-xs md:text-sm text-left leading-relaxed text-[#7A6558]">
                     <div class="bg-white/50 p-4 rounded-xl border border-white">
-                        <p class="font-bold mb-1">🎁 社群禮遇</p>
+                        <p class="font-bold mb-1 flex items-center">🎁 社群禮遇</p>
                         <p>• 加入官方LINE + 追蹤IG：贈送護睫小禮 (睫毛刷+雨衣)</p>
                         <p>• IG限動打卡：回饋 $100 分享券 (下次抵用)</p>
                     </div>
                     <div class="bg-white/50 p-4 rounded-xl border border-white">
-                        <p class="font-bold mb-1">✨ 會員制度</p>
+                        <p class="font-bold mb-1 flex items-center">✨ 會員制度</p>
                         <p>• 轉介紹 1 位朋友完成嫁接，即可升級為「以娜會員」，享有終身全款式 9 折優惠 (不含卸補)。</p>
                     </div>
                 </div>
@@ -119,9 +116,10 @@
             <h2 class="main-heading">SERVICE MENU 價目表</h2>
             
             <div class="space-y-6">
-                <!-- 經典款 -->
+                <!-- 經典單根 -->
                 <div class="section-card p-6">
-                    <h3 class="font-bold mb-5 flex items-center text-[#7A6558]"><span class="tag">經典</span> 經典單根系列</h3>
+                    <h3 class="font-bold mb-3 flex items-center text-[#7A6558]"><span class="tag">經典</span> 經典單根系列</h3>
+                    <span class="time-tag">⏱ 施作時間：120 分鐘</span>
                     <div class="price-item"><span>100 根</span><span class="font-medium">$1000</span></div>
                     <div class="price-item"><span>120 根</span><span class="font-medium">$1200</span></div>
                     <div class="price-item"><span>140 根</span><span class="font-medium">$1400</span></div>
@@ -129,36 +127,60 @@
 
                 <!-- 柔密款 -->
                 <div class="section-card p-6">
-                    <h3 class="font-bold mb-5 flex items-center text-[#7A6558]"><span class="tag">熱門</span> 柔密款 (仙子/YY/U花/三葉)</h3>
+                    <h3 class="font-bold mb-3 flex items-center text-[#7A6558]"><span class="tag">熱門</span> 柔密款 (U花/仙子/YY/三葉)</h3>
+                    <span class="time-tag">⏱ 施作時間：120 分鐘</span>
                     <div class="price-item"><span>300 - 400 根</span><span class="font-medium">$1500</span></div>
                     <div class="price-item"><span>500 - 600 根</span><span class="font-medium">$1600</span></div>
                 </div>
 
-                <!-- 設計系列 -->
+                <!-- 設計系列 (已根據最新照片優化) -->
                 <div class="section-card p-6">
-                    <!-- 新中式美睫 -->
                     <div class="mb-8">
-                        <h3 class="font-bold mb-5 flex items-center text-[#7A6558]"><span class="tag">設計</span> 新中式美睫</h3>
+                        <h3 class="font-bold mb-3 flex items-center text-[#7A6558]"><span class="tag">設計</span> 新中式美睫</h3>
+                        <span class="time-tag">⏱ 施作時間：150 分鐘</span>
                         <div class="price-item"><span>上睫毛 + 下睫毛</span><span class="font-medium">$1880</span></div>
-                        <p class="text-[10px] text-red-700/60 text-right italic font-medium">不能補睫</p>
+                        <p class="text-[11px] text-[#A68A78] text-right italic mt-1">不能補睫</p>
                     </div>
 
-                    <!-- 小紅書款 -->
                     <div>
-                        <h3 class="font-bold mb-5 flex items-center text-[#7A6558]"><span class="tag">設計</span> 小紅書設計款</h3>
+                        <h3 class="font-bold mb-3 flex items-center text-[#7A6558]"><span class="tag">設計</span> 小紅書設計款</h3>
+                        <span class="time-tag">⏱ 施作時間：150 分鐘</span>
                         <div class="price-item"><span>上睫毛 + 下睫毛</span><span class="font-medium">$1680</span></div>
-                        <p class="text-[10px] text-red-700/60 text-right italic font-medium">不能補睫</p>
+                        <p class="text-[11px] text-[#A68A78] text-right italic mt-1">不能補睫</p>
                     </div>
                 </div>
 
-                <!-- 其他服務 -->
+                <!-- 下睫毛 -->
+                <div class="section-card p-6">
+                    <h3 class="font-bold mb-3 flex items-center text-[#7A6558]">下睫毛服務</h3>
+                    <span class="time-tag">⏱ 施作時間：30 分鐘</span>
+                    <div class="price-item"><span>20 根</span><span class="font-medium">$200</span></div>
+                    <div class="price-item"><span>30 根</span><span class="font-medium">$290</span></div>
+                    <div class="price-item"><span>40 根</span><span class="font-medium">$380</span></div>
+                </div>
+
+                <!-- 卸除與補睫 -->
                 <div class="grid md:grid-cols-2 gap-6">
                     <div class="section-card p-6">
                         <h4 class="font-bold mb-4 text-sm border-b pb-2">卸除服務</h4>
-                        <div class="price-item text-sm"><span>本店卸除</span><span>$200</span></div>
-                        <div class="price-item text-sm"><span>本店卸除重接</span><span class="text-[#A68A78]">Free</span></div>
-                        <div class="price-item text-sm"><span>他店卸除</span><span>$400</span></div>
-                        <div class="price-item text-sm"><span>他店卸除重接</span><span>$300</span></div>
+                        <div class="space-y-4">
+                            <div>
+                                <div class="price-item text-sm"><span>本店卸除重接</span><span class="text-[#A68A78]">Free</span></div>
+                                <span class="text-[9px] opacity-50 block mt-1">+30 分鐘</span>
+                            </div>
+                            <div>
+                                <div class="price-item text-sm"><span>本店卸除</span><span>$200</span></div>
+                                <span class="text-[9px] opacity-50 block mt-1">+30 分鐘</span>
+                            </div>
+                            <div>
+                                <div class="price-item text-sm"><span>他店卸除重接</span><span>$300</span></div>
+                                <span class="text-[9px] opacity-50 block mt-1">+40 分鐘</span>
+                            </div>
+                            <div>
+                                <div class="price-item text-sm"><span>他店卸除</span><span>$400</span></div>
+                                <span class="text-[9px] opacity-50 block mt-1">+40 分鐘</span>
+                            </div>
+                        </div>
                     </div>
                     <div class="section-card p-6">
                         <h4 class="font-bold mb-4 text-sm border-b pb-2">定期補睫</h4>
@@ -177,51 +199,51 @@
             
             <div class="text-center mb-6">
                 <p class="text-sm font-medium text-[#8D7B6D] mb-1">🏠 服務空間：居家工作室</p>
-                <p class="text-xs opacity-70">位置：桃園龜山 A7（近 A7 & A8 機捷）</p>
+                <p class="text-xs opacity-70">位置：桃園龜山 A7 (近 A7 & A8 機捷)</p>
             </div>
 
             <div class="section-card p-8 bg-[#EAE2DC]">
                 <ul class="space-y-4 text-sm font-light">
-                    <li class="flex gap-3">
-                        <span class="text-[#A68A78]">●</span>
+                    <li class="flex gap-4">
+                        <span class="w-2 h-2 rounded-full bg-[#A68A78] mt-1.5 shrink-0"></span>
                         <span>3 個月內無施作睫毛管理 (角蛋白)</span>
                     </li>
-                    <li class="flex gap-3">
-                        <span class="text-[#A68A78]">●</span>
+                    <li class="flex gap-4">
+                        <span class="w-2 h-2 rounded-full bg-[#A68A78] mt-1.5 shrink-0"></span>
                         <span>半年內未做過眼睛手術</span>
                     </li>
-                    <li class="flex gap-3">
-                        <span class="text-[#A68A78]">●</span>
-                        <span>居家工作室環境維護，<span class="font-medium underline">請勿攜伴</span></span>
+                    <li class="flex gap-4">
+                        <span class="w-2 h-2 rounded-full bg-[#A68A78] mt-1.5 shrink-0"></span>
+                        <span>居家工作室環境維護，<span class="font-bold underline">請勿攜伴</span></span>
                     </li>
-                    <li class="flex gap-3">
-                        <span class="text-[#A68A78]">●</span>
-                        <span>若無法赴約請提前 <span class="font-bold text-[#8D7B6D]">兩天</span> 告知，以便安排補位</span>
+                    <li class="flex gap-4">
+                        <span class="w-2 h-2 rounded-full bg-[#A68A78] mt-1.5 shrink-0"></span>
+                        <span>若無法赴約請提前 <span class="font-bold">兩天</span> 告知，以便安排補位</span>
                     </li>
-                    <li class="flex gap-3">
-                        <span class="text-[#A68A78]">●</span>
+                    <li class="flex gap-4">
+                        <span class="w-2 h-2 rounded-full bg-[#A68A78] mt-1.5 shrink-0"></span>
                         <span>預約保留 10 分鐘，請務必準時赴約</span>
                     </li>
-                    <li class="flex gap-3">
-                        <span class="text-[#A68A78]">●</span>
-                        <span class="font-medium italic text-[#8D7B6D]">詳細地址將於預約成功後、嫁接前一天提醒預約時告知</span>
+                    <li class="flex gap-4">
+                        <span class="w-2 h-2 rounded-full bg-[#A68A78] mt-1.5 shrink-0"></span>
+                        <span>詳細地址將於預約成功後、嫁接前一天提醒預約時告知</span>
                     </li>
-                    <li class="flex gap-3 text-red-700/80">
-                        <span class="text-red-700">●</span>
-                        <span class="font-medium">當天放鳥者將移置黑名單不再服務</span>
+                    <li class="flex gap-4 text-red-700 font-medium">
+                        <span class="w-2 h-2 rounded-full bg-red-700 mt-1.5 shrink-0"></span>
+                        <span>當天放鳥者將移置黑名單不再服務</span>
                     </li>
                 </ul>
                 
                 <div class="mt-10 pt-6 border-t border-white/40 flex flex-col md:flex-row justify-between items-center gap-4 text-xs">
-                    <div class="font-medium">💰 付款方式：現金 / 轉帳</div>
+                    <div class="font-medium text-[#8D7B6D]">💰 付款方式：現金 / 轉帳</div>
                     <div class="italic opacity-60">感謝您的配合與體諒</div>
                 </div>
             </div>
         </section>
 
         <footer class="text-center pb-24">
-            <div class="mb-4 opacity-40 italic text-sm font-light tracking-widest">Minimalist Lash Design</div>
-            <p class="text-[10px] opacity-30 tracking-tighter uppercase">© ina.lashes | All Rights Reserved</p>
+            <div class="mb-4 opacity-40 italic text-sm font-light tracking-widest text-[#8D7B6D]">Minimalist Lash Design</div>
+            <p class="text-[10px] opacity-30 tracking-tighter uppercase">© INA.LASHES | ALL RIGHTS RESERVED</p>
         </footer>
 
     </main>
