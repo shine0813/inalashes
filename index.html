@@ -7,63 +7,15 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
     <style>
-        body {
-            font-family: 'Noto Sans TC', sans-serif;
-            background-color: #F2E9E4;
-            color: #4A3E37;
-        }
-        .serif {
-            font-family: 'Playfair Display', serif;
-        }
-        .section-card {
-            background: rgba(255, 255, 255, 0.7);
-            border-radius: 24px;
-            box-shadow: 0 10px 30px rgba(171, 145, 127, 0.1);
-        }
-        .price-item {
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
-            margin-bottom: 0.5rem;
-            border-bottom: 1px dashed #D5BDAF;
-            padding-bottom: 0.3rem;
-        }
-        .time-tag {
-            font-size: 0.7rem;
-            color: #A68A78;
-            margin-top: -0.25rem;
-            margin-bottom: 0.75rem;
-            display: block;
-        }
-        .main-heading {
-            font-size: 1.15rem; 
-            font-weight: 700;
-            letter-spacing: 0.05em; 
-            text-align: center;
-            margin-bottom: 2rem;
-            color: #8D7B6D;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            white-space: nowrap; 
-        }
-        .main-heading::before, .main-heading::after {
-            content: "";
-            flex: 1;
-            height: 1px;
-            background: #D5BDAF;
-            margin: 0 10px; 
-            opacity: 0.5;
-        }
-        .tag {
-            background-color: #E3D5CA;
-            color: #7A6558;
-            padding: 2px 10px;
-            border-radius: 6px;
-            font-size: 0.7rem;
-            margin-right: 8px;
-            font-weight: 600;
-        }
+        body { font-family: 'Noto Sans TC', sans-serif; background-color: #F2E9E4; color: #4A3E37; }
+        .serif { font-family: 'Playfair Display', serif; }
+        .section-card { background: rgba(255, 255, 255, 0.7); border-radius: 24px; box-shadow: 0 10px 30px rgba(171, 145, 127, 0.1); }
+        .price-item { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.5rem; border-bottom: 1px dashed #D5BDAF; padding-bottom: 0.3rem; }
+        .time-tag { font-size: 0.7rem; color: #A68A78; margin-top: -0.25rem; margin-bottom: 0.75rem; display: block; }
+        .main-heading { font-size: 1.15rem; font-weight: 700; letter-spacing: 0.05em; text-align: center; margin-bottom: 2rem; color: #8D7B6D; display: flex; align-items: center; justify-content: center; }
+        .main-heading::before, .main-heading::after { content: ""; flex: 1; height: 1px; background: #D5BDAF; margin: 0 10px; opacity: 0.5; }
+        .tag { background-color: #E3D5CA; color: #7A6558; padding: 2px 10px; border-radius: 6px; font-size: 0.7rem; margin-right: 8px; font-weight: 600; }
+        .activity-card { border: 1px solid #D5BDAF; background: #FDF8F5; border-radius: 20px; padding: 20px; }
     </style>
 </head>
 <body class="py-12 px-5 md:px-0">
@@ -73,15 +25,50 @@
         <p class="text-sm tracking-[0.4em] font-light opacity-80">以娜 · 美睫 · LASHES</p>
     </header>
 
-    <main class="max-w-2xl mx-auto space-y-20">
+    <main class="max-w-2xl mx-auto space-y-16">
+
+        <!-- 優惠與活動 -->
+        <section id="activities">
+            <h2 class="main-heading">EVENT 活動資訊</h2>
+            <div class="activity-card space-y-6 text-sm">
+                <div>
+                    <h3 class="font-bold text-[#7A6558] mb-2 border-b border-[#D5BDAF] pb-1">✨ 新客專屬</h3>
+                    <p class="pl-2">• 全款式嫁接享 9 折優惠</p>
+                </div>
+                <div>
+                    <h3 class="font-bold text-[#7A6558] mb-3 border-b border-[#D5BDAF] pb-1">🎁 常態活動</h3>
+                    <ul class="space-y-4 pl-2">
+                        <li class="flex gap-2">
+                            <span class="font-bold">1.</span>
+                            <span>加入官方LINE+追蹤IG：贈送護睫小禮 (Mini睫毛刷+雨衣)</span>
+                        </li>
+                        <li class="flex gap-2">
+                            <span class="font-bold">2.</span>
+                            <div class="flex-1">
+                                IG限動打卡回饋 $100 分享券：<br>
+                                <span class="text-xs opacity-70 mt-1 block">
+                                    • 發自拍照＋tag 以娜美睫官方帳號<br>
+                                    • 或限動轉發我的作品集貼文<br>
+                                    (分享券為下次使用，可折抵任一款式)
+                                </span>
+                            </div>
+                        </li>
+                        <li class="flex gap-2">
+                            <span class="font-bold">3.</span>
+                            <span>轉介紹 1 位朋友完成嫁接，即可成為以娜會員，享終身全款式 9 折 (不含卸睫/補睫)</span>
+                        </li>
+                    </ul>
+                    <p class="text-[10px] opacity-50 mt-4 italic text-right">* ina以娜・美睫保有活動最終終止解釋權</p>
+                </div>
+            </div>
+        </section>
         
-        <!-- SECTION: 價目表 -->
+        <!-- 價目表 -->
         <section id="pricelist">
             <h2 class="main-heading">SERVICE MENU 價目表</h2>
             <p class="text-center text-sm text-[#A68A78] mb-6 font-medium italic">🎁 各款式服務均贈送下睫毛</p>
             
             <div class="space-y-6">
-                <!-- 經典單根 -->
                 <div class="section-card p-6">
                     <h3 class="font-bold mb-3 flex items-center text-[#7A6558]"><span class="tag">經典</span> 經典單根系列</h3>
                     <span class="time-tag">⏱ 施作時間：120 分鐘</span>
@@ -89,7 +76,6 @@
                     <div class="price-item"><span>濃密</span><span class="font-medium">$1200</span></div>
                 </div>
 
-                <!-- 柔密款 -->
                 <div class="section-card p-6">
                     <h3 class="font-bold mb-3 flex items-center text-[#7A6558]"><span class="tag">熱門</span> 柔密款 (U花/仙子/YY/三葉)</h3>
                     <span class="time-tag">⏱ 施作時間：120 分鐘</span>
@@ -97,53 +83,28 @@
                     <div class="price-item"><span>濃密</span><span class="font-medium">$1200</span></div>
                 </div>
 
-                <!-- 設計系列 -->
                 <div class="section-card p-6">
                     <div class="mb-8">
-                        <h3 class="font-bold mb-3 flex items-center text-[#7A6558]"><span class="tag">設計</span> 新中式美睫</h3>
+                        <h3 class="font-bold mb-3 flex items-center text-[#7A6558]"><span class="tag">設計</span> 新中式設計款</h3>
                         <span class="time-tag">⏱ 施作時間：180 分鐘</span>
                         <div class="price-item"><span>上睫毛 + 下睫毛</span><span class="font-medium">$1480</span></div>
-                        <p class="text-[11px] text-[#A68A78] text-right italic mt-1">不能補睫</p>
                     </div>
-
                     <div>
                         <h3 class="font-bold mb-3 flex items-center text-[#7A6558]"><span class="tag">設計</span> 小紅書設計款</h3>
                         <span class="time-tag">⏱ 施作時間：150 分鐘</span>
                         <div class="price-item"><span>上睫毛 + 下睫毛</span><span class="font-medium">$1380</span></div>
-                        <p class="text-[11px] text-[#A68A78] text-right italic mt-1">不能補睫</p>
                     </div>
-                </div>
-
-                <!-- 下睫毛 -->
-                <div class="section-card p-6">
-                    <h3 class="font-bold mb-3 flex items-center text-[#7A6558]">下睫毛服務</h3>
-                    <span class="time-tag">⏱ 施作時間：30 分鐘</span>
-                    <div class="price-item"><span>20 根</span><span class="font-medium">$200</span></div>
-                    <div class="price-item"><span>30 根</span><span class="font-medium">$290</span></div>
-                    <div class="price-item"><span>40 根</span><span class="font-medium">$380</span></div>
                 </div>
 
                 <!-- 卸除與補睫 -->
                 <div class="grid md:grid-cols-2 gap-6">
                     <div class="section-card p-6">
                         <h4 class="font-bold mb-4 text-sm border-b pb-2">卸除服務</h4>
-                        <div class="space-y-4">
-                            <div>
-                                <div class="price-item text-sm"><span>本店卸除重接</span><span class="text-[#A68A78]">Free</span></div>
-                                <span class="text-[9px] opacity-50 block mt-1">+30 分鐘</span>
-                            </div>
-                            <div>
-                                <div class="price-item text-sm"><span>本店卸除</span><span>$200</span></div>
-                                <span class="text-[9px] opacity-50 block mt-1">+30 分鐘</span>
-                            </div>
-                            <div>
-                                <div class="price-item text-sm"><span>他店卸除重接</span><span>$300</span></div>
-                                <span class="text-[9px] opacity-50 block mt-1">+40 分鐘</span>
-                            </div>
-                            <div>
-                                <div class="price-item text-sm"><span>他店卸除</span><span>$400</span></div>
-                                <span class="text-[9px] opacity-50 block mt-1">+40 分鐘</span>
-                            </div>
+                        <div class="space-y-4 text-sm">
+                            <div class="price-item"><span>本店卸除重接</span><span class="text-[#A68A78]">Free</span></div>
+                            <div class="price-item"><span>本店卸除</span><span>$200</span></div>
+                            <div class="price-item"><span>他店卸除重接</span><span>$300</span></div>
+                            <div class="price-item"><span>他店卸除</span><span>$400</span></div>
                         </div>
                     </div>
                     <div class="section-card p-6">
@@ -157,7 +118,7 @@
             <p class="text-center text-[10px] mt-8 tracking-widest opacity-40">價目調整日期：2026 / 04 / 17</p>
         </section>
 
-        <!-- SECTION: 預約須知 -->
+        <!-- 預約須知 -->
         <section id="notes">
             <h2 class="main-heading">RESERVATION 預約須知</h2>
             
@@ -190,10 +151,6 @@
                     </li>
                     <li class="flex gap-4">
                         <span class="w-2 h-2 rounded-full bg-[#A68A78] mt-1.5 shrink-0"></span>
-                        <span>無法接受當天臨時預約</span>
-                    </li>
-                    <li class="flex gap-4">
-                        <span class="w-2 h-2 rounded-full bg-[#A68A78] mt-1.5 shrink-0"></span>
                         <span>詳細地址將於預約成功後、嫁接前一天提醒預約時告知</span>
                     </li>
                     <li class="flex gap-4 text-red-700 font-medium">
@@ -209,13 +166,7 @@
             </div>
         </section>
 
-        <footer class="text-center pb-24">
-            <div class="mb-4 opacity-40 italic text-sm font-light tracking-widest text-[#8D7B6D]">Minimalist Lash Design</div>
-            <p class="text-[10px] opacity-30 tracking-tighter uppercase">© INA.LASHES | ALL RIGHTS RESERVED</p>
-        </footer>
-
     </main>
-
 </body>
 </html>
 
